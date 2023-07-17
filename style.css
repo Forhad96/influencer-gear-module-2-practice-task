@@ -17,7 +17,7 @@ img{
 }
 :root {
   /* font size */
-
+  
   --font-small: 14px;
   --font-medium: 24px;
   --font-extra-medium: 28px;
@@ -54,8 +54,9 @@ img{
 
 /* style rule  for common style*/
 .container {
-  width: 90%;
+  max-width: 90rem;
   margin:0 auto;
+  padding: 0 2.5rem;
 }
 
 .button {
@@ -101,9 +102,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* justify-content: center; */
     margin-top: 5rem;
-    /* height: 70vh; */
 }
 
 .sectionOne__content{
@@ -112,6 +111,7 @@ nav {
     gap: 1rem;
     align-items: flex-start;
     justify-items: center;
+    /* max-width: 50%; */
 
 }
 
@@ -133,19 +133,25 @@ nav {
 .sectionOne__image{
   background: url("/images/Circle-design.svg") no-repeat center;
   padding: 40px;
+  /* max-width: 50%; */
 }
-
+.sectionOne__image img{
+  object-fit: cover;
+}
 
 
 
 
 /* style for media query */
 
-@media screen and (max-width:576px){
+@media screen and (width < 576px){
+
   nav
   {
     flex-direction: column;
     gap: 2.5rem;
+    padding: 0 2rem;
+
   }
   nav ul{
     
@@ -159,12 +165,21 @@ nav {
     align-items: center;
     justify-content: center;
   }
-  .sectionOne__content--title{
+  .sectionOne__content{
     text-align: center;
+    align-items: center;
+  }
+  .sectionOne__content--title{
     font-size: var(--font-extra-medium);
   }
   .sectionOne__content--text{
-    text-align: center;
     font-size: var(--font-small);
   }
 }
+
+@media screen and (width >= 576px) {
+  
+}
+
+
+
