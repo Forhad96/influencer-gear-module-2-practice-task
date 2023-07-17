@@ -1,88 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    list-style: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
-:root{
-
-    /* font size */
-
-    --font-small: .875rem;
-    --font-medium:1.5rem;
-    --font-extra-medium:1.75rem;
-    --font-large:2.375rem;
-    --font-extra-large:3.25rem;
-
-    /* font weight */
-
-    --fw-400: 400;
-    --fw-500: 500;
-    --fw-600: 600;
-    --fw-700: 700;
-
-    /* line height */
-
-    --lh-20:20px;
-    --lh-24:24px;
-    --lh-28:28px;
-    --lh-36:36px;
-    --lh-70:70px;
-
-    /* font color */
-
-    --color-primary:#3A3A3A;
-    --color-gray-900: #18191F;
-    --color-gray-200:rgba(0, 0, 0, 0.87);
-    --color-gray-100: #5E6366;
-    --color-gray-50: #787885;
-    --color-gray:#6C6C6C;
-    --color-blue:#0A0826;
-    --color-white:#fff;
-
-
-
+body{
+  width: 100%;
 }
+img{
+  max-width: 100%;
+  object-fit: cover;
+}
+:root {
+  /* font size */
 
+  --font-small: 14px;
+  --font-medium: 24px;
+  --font-extra-medium: 28px;
+  --font-large: 38px;
+  --font-extra-large: 52px;
+
+  /* font weight */
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* line height */
+
+  --lh-20: 1.25rem;
+  --lh-24: 1.5rem;
+  --lh-28: 1.75rem;
+  --lh-36: 2.25rem;
+  --lh-70: 4.375rem;
+
+  /* font color */
+
+  --color-primary: #3a3a3a;
+  --color-gray-900: #18191f;
+  --color-gray-200: rgba(0, 0, 0, 0.87);
+  --color-gray-100: #5e6366;
+  --color-gray-50: #787885;
+  --color-gray: #6c6c6c;
+  --color-blue: #0a0826;
+  --color-white: #fff;
+  --color-pink:#E02C6D;
+}
 
 /* style rule  for common style*/
-.container{
-    width: 1440px;
-    margin: auto;
+.container {
+  width: 90%;
+  margin:0 auto;
 }
 
-
-
-
+.button {
+  padding: .625rem 1.5rem;
+  background: var(--color-pink);
+  color: var(--color-white);
+  font-weight: var(--fw-700);
+  border: none;
+}
 
 /* style rule for header */
 
-
-
-
 /* style rule for navbar */
 
-nav{
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 2rem;
+}
+.nav__title a {
+  color: var(--color-primary);
+  font-size: var(--font-medium);
+  font-weight: var(--fw-700);
+}
+
+.nav__menu {
+  display: flex;
+  gap: 34px;
+}
+
+.nav__menu--item > a {
+  color: var(--color-primary);
+  font-weight: var(--fw-600);
+}
+
+/* style rule for main */
+
+
+/* style rule for section */
+
+.sectionOne{
     display: flex;
     justify-content: space-between;
-    align-content: center;
-}
-.nav__title a{
-    color: var(--color-primary);
-    font-size: var(--font-medium);
-    font-weight: var(--fw-700);
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 5rem;
+    /* height: 70vh; */
 }
 
-.nav__menu{
+.sectionOne__content{
     display: flex;
-    gap: 2.125rem;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-items: center;
+
 }
 
-.nav__menu--item > a{
+.sectionOne__content--title{
+    font-size: var(--font-extra-large);
+    font-weight: var(--fw-700);
     color: var(--color-primary);
+}
+.sectionOne__content--text{
     font-weight: var(--fw-600);
+    color: var(--color-primary);
+    
+}
+
+.sectionOne__content--btn{
+    border-radius: 2.5625rem;
+}
+
+.sectionOne__image{
+  background: url("/images/Circle-design.svg") no-repeat center;
+  padding: 40px;
+}
+
+
+
+
+
+/* style for media query */
+
+@media screen and (max-width:576px){
+  nav
+  {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  nav ul{
+    
+    flex-wrap: wrap;
+
+  }
+
+  /* media style for section one */
+  .sectionOne{
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionOne__content--title{
+    text-align: center;
+    font-size: var(--font-extra-medium);
+  }
+  .sectionOne__content--text{
+    text-align: center;
+    font-size: var(--font-small);
+  }
 }
