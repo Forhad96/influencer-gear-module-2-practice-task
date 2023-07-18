@@ -150,10 +150,10 @@ nav {
 
 /* style rule for sectionThree */
 
-.sectionThree{
+.sectionThree {
   margin-top: 6.25rem;
 }
-.sectionThree__title{
+.sectionThree__title {
   font-size: var(--font-extra-medium);
   font-weight: var(--fw-600);
   color: var(--color-primary);
@@ -164,7 +164,7 @@ nav {
 .sectionThree__card--wrapper {
   display: grid;
   gap: 1.875rem;
-  grid-template-columns: repeat(auto-fit,minmax(20.5625rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20.5625rem, 1fr));
   justify-items: center;
 }
 .sectionThree__card--body {
@@ -172,7 +172,7 @@ nav {
   height: 29.75rem;
   display: flex;
   flex-direction: column;
-  padding: 1.0625rem .875rem;
+  padding: 1.0625rem 0.875rem;
   border-radius: 0.3125rem;
   background: #fff;
   box-shadow: 0rem 0rem 2.5rem 0rem rgba(0, 0, 0, 0.15);
@@ -205,13 +205,37 @@ nav {
   margin: 0;
 }
 
-.sectionThree__see-more{
+.sectionThree__see-more {
   color: var(--color-pink);
   font-weight: var(--fw-700);
   text-align: right;
   margin-top: 3.125rem;
   margin-right: 48px;
 }
+/* style rule for sectionFour */
+/* .sectionFour */
+.sectionFour__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6rem;
+}
+
+/* .sectionFour__content--wrapper {
+} */
+
+.sectionFour__content--title {
+  color: var(--color-blue);
+  font-size: var(--font-large);
+  font-weight: var(--fw-700);
+}
+.sectionFour__content--details {
+  color: var(--color-gray);
+  font-weight: var(--fw-700);
+}
+/* .sectionFour__content--btn img{
+} */
+
 /* style for media query */
 
 @media screen and (width < 36rem) {
@@ -241,16 +265,16 @@ nav {
     font-size: var(--font-small);
   }
 
-  /* media style rule fot sectionThree */
-/* .sectionThree__card--wrapper{
-  grid-template-columns: repeat(1,1fr);
-} */
+  /* media style rule fot sectionFour */
+  .sectionFour__wrapper{
+    flex-wrap: wrap-reverse;
+  }
+
 }
 
-@media screen and (width >= 36rem) and (width < 920){
-
-    /* media style rule fot sectionThree */
-/* .sectionThree__card--wrapper{
+@media screen and (width >= 36rem) and (width < 920) {
+  /* media style rule fot sectionThree */
+  /* .sectionThree__card--wrapper{
   grid-template-columns: repeat(2,1fr);
 } */
 }
