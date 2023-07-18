@@ -236,6 +236,31 @@ nav {
 /* .sectionFour__content--btn img{
 } */
 
+/* style rule for footer */
+footer{
+  background: var(--color-blue);
+  padding: 3.125rem;
+  margin-top: 7.5rem;
+}
+.footer__wrapper{
+  text-align: center;
+  display: flex;
+  gap: .625rem;
+  flex-direction: column;
+
+}
+.footer__title{
+  font-size: var(--font-medium);
+  font-weight: var(--fw-700);
+  color: var(--color-white);
+}
+.footer__copy-write{
+  font-size: var(--font-small);
+  font-weight: var(--fw-700);
+}
+.footer__social img{
+  margin-right: 1rem;
+}
 /* style for media query */
 
 @media screen and (width < 36rem) {
